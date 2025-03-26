@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import {puppyList} from './data.js'
 import './App.css'
+import Searchbar from './components/Searchbar.jsx';
 
 function App() {
   const [puppies, setPuppies] = useState(puppyList);
   const [featPupId, setFeatPupId] = useState(null);
   console.log('puppyList: ', puppyList);
 
-  console.log(featPupId)
   const featuredPup = puppies.find((pup) => pup.id === featPupId)
-  console.log(featuredPup)
+  
   return (
     <>
+    <Searchbar puppies={puppies} />
     {featPupId && (
       <div>
         <h2>{featuredPup.name}</h2>

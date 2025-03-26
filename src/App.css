@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+div * {
+  margin: 20px;
+}
+
+.App {
+  margin-top: 30px;
+}
